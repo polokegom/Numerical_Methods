@@ -1,4 +1,4 @@
-def newtonRaphson(num, intervals) : 
+def newtonRaphson(num) : 
     val = num 
     count = 0
     isFound =False
@@ -6,9 +6,9 @@ def newtonRaphson(num, intervals) :
     while (not isFound) :
         count += 1
         root = 0.5 * (val + (num / val)) 
-        isFound = (abs(root - val) < intervals)
+        isFound = (abs(root - val) < 1)
         val = root
     return root 
  
 if __name__ == "__main__" : 
-    print(newtonRaphson(144, 0.1)) 
+    print(newtonRaphson(144)) 
